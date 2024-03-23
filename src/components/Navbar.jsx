@@ -1,11 +1,6 @@
-import { useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 
 const Navbar = () => {
-
-
-  const [ theme, setTheme ] = useState();
- 
   return (
     <div className="navbar bg-black py-8 px-12 max-w-screen-2xl mx-auto rounded-3xl flex justify-between items-center">
       <div>

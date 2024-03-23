@@ -1,8 +1,32 @@
-const c = () => {
+import { useEffect, useState } from "react";
+
+const ThemeToggler = () => {
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+  );
+
+  const handleToggle = (e) => {
+    if(e.target.checked){
+      setTheme("dark");
+    }
+    else{
+      setTheme("light");
+    }
+  }
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }, [theme]);
+
   return (
     <div>
       <label className="swap swap-rotate">
-        <input type="checkbox" />
+        <input type="checkbox" 
+        onChange={handleToggle}
+        checked={ theme === "light" ? false : true}
+        />
 
         <svg
           className="swap-on fill-current w-10 h-10 text-white"
@@ -24,4 +48,4 @@ const c = () => {
   );
 };
 
-export default c;
+export default ThemeToggler;

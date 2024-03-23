@@ -1,12 +1,10 @@
 import "./App.css";
-
+import Navbar from "./components/Navbar";
 function App() {
   return (
-    <>
-      <h1 className="text-6xl text-center text-purple-600">
-        Simple Dark and Light Mode
-      </h1>
-    </>
+    <section>
+      <Navbar></Navbar>
+    </section>
   );
 }
 

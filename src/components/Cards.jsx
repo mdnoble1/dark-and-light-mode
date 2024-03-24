@@ -1,8 +1,9 @@
 const Cards = () => {
   return (
     <section className="max-w-screen-2xl mx-auto py-32">
-      <div className="flex justify-center items-center gap-20">
-        <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="grid grid-cols-3 gap-20 w-11/12 mx-auto">
+        {/* 1  */}
+        <div className="card w-96 card-bg shadow-xl mx-auto">
           <figure>
             <img src="https://i.ibb.co/Ypngzwk/game1.png" alt="image" />
           </figure>
@@ -20,7 +21,8 @@ const Cards = () => {
             </div>
           </div>
         </div>
-        <div className="card w-96 bg-base-100 shadow-xl">
+        {/* 2 */}
+        <div className="card w-96 card-bg shadow-xl mx-auto">
           <figure>
             <img src="https://i.ibb.co/Ypngzwk/game1.png" alt="image" />
           </figure>
@@ -38,7 +40,8 @@ const Cards = () => {
             </div>
           </div>
         </div>
-        <div className="card w-96 bg-base-100 shadow-xl">
+        {/* 3 */}
+        <div className="card w-96 card-bg shadow-xl mx-auto">
           <figure>
             <img src="https://i.ibb.co/Ypngzwk/game1.png" alt="image" />
           </figure>
